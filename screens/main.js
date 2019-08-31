@@ -12,12 +12,14 @@ export default class main extends Component {
         return (
             <Fragment>
 
-                <StatusBar></StatusBar>
+                <StatusBar backgroundColor='#F9F9F9' barStyle='dark-content'></StatusBar>
                 <SafeAreaView style={{ flex: 1, backgroundColor: '#F9F9F9' }}>
 
                     {/* HEADER */}
 
-                    <View style={{ height: 50, backgroundColor: '#F9F9F9', flexDirection: 'row', paddingHorizontal: 5, paddingVertical: 10 }}>
+                    <View style={{ height: 50, backgroundColor: '#F9F9F9', flexDirection: 'row', paddingHorizontal: 5, paddingVertical: 15,elevation:2,
+
+}}>
 
 
                         <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', top: -8 }}>
@@ -63,7 +65,6 @@ export default class main extends Component {
                         <ScrollView>
 
 
-
                         </ScrollView>
                     </View>
 
@@ -75,7 +76,43 @@ export default class main extends Component {
 
 
                     {/* FOOTER */}
-                    <View></View>
+                    <View
+                        style={{
+                            height: 65,
+                            flexDirection: 'row',
+                            paddingHorizontal: 30,
+
+                            justifyContent: 'space-between',
+                            // alignItems:"center",
+                        }}>
+
+                        <Image
+                            source={require('../assets/home.png')}
+                            style={{ resizeMode: 'contain', width: 30, top: 10 }}
+                        />
+
+                        <Image
+                            source={require('../assets/search.png')}
+                            style={{ resizeMode: 'contain', width: 30, top: 10 }}
+                        />
+
+
+                        <Image
+                            source={require('../assets/add.png')}
+                            style={{ resizeMode: 'contain', width: 30, top: 10 }}
+                        />
+
+                        <Image
+                            source={require('../assets/heart.png')}
+                            style={{ resizeMode: 'contain', width: 30, top: 10 }}
+                        />
+
+                        <Image
+                            source={require('../assets/profile.png')}
+                            style={{ resizeMode: 'contain', width: 30, top: 10 }}
+                        />
+
+                    </View>
 
                 </SafeAreaView>
             </Fragment>
