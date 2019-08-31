@@ -29,7 +29,15 @@ export default class  extends Component {
   containerStyle={{width:'100%',marginTop:30}}
 />
 
-<Text style={{color:'#9DA1A5', marginTop:20, fontSize:14,fontWeight:500}}>Forgot your login details? <Text style={{fontWeight:700}}>Get help signing in.</Text></Text>
+<View style={{flexDirection:'row', marginTop:20}}>
+<Text style={{color:'#9DA1A5',fontSize:14,fontWeight:'500'}}>Forgot your login details? 
+
+</Text>
+<TouchableOpacity>
+<Text style={{fontWeight:'700',color:'#9DA1A5', fontSize:14}}> Get help signing in.</Text>
+</TouchableOpacity>
+
+</View>
 
 <View style={{borderBottomWidth:1,borderBottomColor:'#C9C9C9',width:'100%',height:10,marginTop:30}}>
             <Text style={{position:"absolute",backgroundColor:'white',paddingHorizontal:10,alignSelf:"center",fontSize:18,fontWeight:'600',color:'#999999'}}> OR</Text>
