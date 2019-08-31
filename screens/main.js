@@ -15,6 +15,26 @@ export default class main extends Component {
         require('../assets/profile.png')
     ]
 
+    instaData=[
+        {
+            profileLogo: require('../assets/i.jpg'),
+            username: 'instagram',
+            mainImage:require('../assets/mountain.jpg'),
+            likes:'732,398',
+            description:'Somewhere between the bottom of the climb and the summit is the answer to the mystery why we climb.',
+            comments:'4,755',
+            time:'16',
+        },
+        {
+            profileLogo: {uri:'https://idsb.tmgrup.com.tr/2015/12/29/HaberDetay/1451336126186.jpg'},
+            username: 'taylorswift',
+            mainImage:{uri:'https://www.instagram.com/p/B07VGJvjPjB/media?size=l'},
+            likes:'732,398',
+            description:'Can’t stop won’t stop twinning with Paddington. 🐻',
+            comments:'2,004,815',
+            time:'20',
+        }
+    ]
     
 
 
@@ -134,15 +154,19 @@ export default class main extends Component {
                         <ScrollView>
 
 
-                            <View>
+                        {this.instaData.map((item,key)=>{
+                            return(
+
+                            
+                            <View style={{marginBottom:10}} key={key}>
 
                                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 15 }}>
                                     <View style={{ flexDirection: 'row', alignItems: "center" }}>
                                         <Image
-                                            source={require('../assets/i.jpg')}
+                                            source={item.profileLogo}
                                             style={{ resizeMode: 'cover', width: 30, height: 30, borderRadius: 15, shadowOpacity: 0.3, shadowRadius: 20 }}
                                         />
-                                        <Text style={{ marginLeft: 5, fontWeight: '600' }}> instagram</Text>
+                                        <Text style={{ marginLeft: 5, fontWeight: '600' }}> {item.username}</Text>
                                     </View>
                                     <TouchableOpacity>
                                         <Image
@@ -154,8 +178,9 @@ export default class main extends Component {
 
                                 <View>
                                     <Image
-                                        source={require('../assets/mountain.jpg')}
-                                        style={{ width: '100%', height: 280 }}
+                                        source={item.mainImage}
+                                        // style={{ width: '100%', height: 280 }}
+                                        style={{ width: '100%',height:300 }}
                                     />
                                 </View>
 
@@ -194,19 +219,21 @@ export default class main extends Component {
                                 </View>
 
                                 <View>
-                                    <Text style={{ paddingHorizontal: 12, fontWeight: '600' }}>732,398 likes</Text>
-                                    <Text style={{ paddingHorizontal: 12, fontWeight: '600', marginTop: 5 }}>instagram
+                                    <Text style={{ paddingHorizontal: 12, fontWeight: '600' }}>{item.likes} likes</Text>
+                                    <Text style={{ paddingHorizontal: 12, fontWeight: '600', marginTop: 5 }}>{item.username}
 
-                                    <Text style={{ fontWeight: '400' }}> Somewhere between the bottom of the climb and the summit is the answer to the mystery why we climb.</Text>
+                                    <Text style={{ fontWeight: '400' }}> {item.description}</Text>
                                     </Text>
                                     <TouchableOpacity>
-                                        <Text style={{ paddingHorizontal: 12, fontWeight: '400', marginTop: 6, color: '#b3b3b3', fontSize: 15 }}>View all 4,755 comments</Text>
+                                        <Text style={{ paddingHorizontal: 12, fontWeight: '400', marginTop: 6, color: '#b3b3b3', fontSize: 15 }}>View all {item.comments} comments</Text>
                                     </TouchableOpacity>
-                                    <Text style={{ paddingHorizontal: 12, fontWeight: '400', marginTop: 6, color: '#b3b3b3', fontSize: 12 }}>16 hours ago</Text>
+                                    <Text style={{ paddingHorizontal: 12, fontWeight: '400', marginTop: 6, color: '#b3b3b3', fontSize: 12 }}>{item.time} hours ago</Text>
 
                                 </View>
 
                             </View>
+                            )
+                        })}
 
                         </ScrollView>
                     </View>
