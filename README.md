@@ -5,10 +5,10 @@
 
 ## How to clone?
 
-run  $ `git clone https://github.com/prashant9912/InstagramClone.git`
+run  $ `git clone https://github.com/prashant9912/InstagramClone.git` <br>
 and 
-`cd InstagramClone`
-`npm install`
+`cd InstagramClone` <br>
+`npm install` <br>
 optional 
 `cd ios && pod install`
 
@@ -16,5 +16,5 @@ optional
 
 ## Run on emulator
 
-Android 👉🏼 `react-native run-android`
+Android 👉🏼 `react-native run-android` <br>
 iOS 👉🏼`react-native run-ios`
